@@ -26,8 +26,7 @@ import emailjs from 'emailjs-com';
 import { useAuth } from '@/context/AuthContext';
 
 
-
-import { Link } from "react-router-dom";
+const navigate = useNavigate();
 
 export function Home() {
     const [status, setStatus] = useState<string>('');
@@ -76,9 +75,7 @@ export function Home() {
                     <div className='flex w-full flex-col items-center gap-6 justify-center'>
                         <h1 className='sm:text-3xl text-2xl text-center font-semibold'>Reconnect with Your Roots</h1>
                         <p className='text-center'>Celebrate the beauty of culture and tradition</p>
-                        <Link to="/signup">
-                            <Button variant="default" className='text-lg'>Get Started Now</Button>
-                        </Link>
+                        <Button variant="default" className="text-lg" onClick={() => navigate("/signup")}>Get Started Now</Button>
 
                     </div>
                     <div className='md:block hidden'>
