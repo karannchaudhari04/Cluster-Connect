@@ -140,13 +140,6 @@ The project is configured using environment variables (as shown above) and utili
 ![Home](./screenshots/10Home.png)
 ---
 
-**Demo Video**
--------------
-
-
-
-
-  https://youtu.be/abQzgB938_4?si=CEnvohNGzUwNiQdc
 
 **Usage**
 -----
