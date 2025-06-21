@@ -24,10 +24,11 @@ import { TestimonialCarousel } from "@/components/ui/testimonial";
 import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "@/envConfig";
 import emailjs from 'emailjs-com';
 import { useAuth } from '@/context/AuthContext';
-
+import { useRef } from "react";
 
 export function Home() {
     const [status, setStatus] = useState<string>('');
+    const infoRef = useRef<HTMLDivElement>(null);
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -72,14 +73,17 @@ export function Home() {
                     <div className='flex w-full flex-col items-center gap-6 justify-center'>
                         <h1 className='sm:text-3xl text-2xl text-center font-semibold'>Reconnect with Your Roots</h1>
                         <p className='text-center'>Celebrate the beauty of culture and tradition</p>
-                        <Button type="button" variant="default" className="text-lg" onClick={() => {
-                            const section = document.getElementById("info");
-                                if (section) {
-                                    section.scrollIntoView({ behavior: "smooth" });
-                                }
-                            }}>
-                        Get Started Now
-                        </Button>
+                        <Button
+  type="button"
+  variant="default"
+  className="text-lg"
+  onClick={() => {
+    infoRef.current?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  Get Started Now
+</Button>
+
 
 
                     </div>
@@ -91,7 +95,7 @@ export function Home() {
             <div id='about' className='snap-center flex lg:flex-row flex-col-reverse gap-52 justify-evenly items-center'>
                 <div className='hidden md:block'><DisplayCardsDemo /></div>
                 <div className='flex flex-col gap-5 m-12 lg:m-0'>
-                    <Card id='info' className='hover:shadow hover:shadow-orange-500 transition-all duration-500'>
+                    <Card ref={infoRef} className='hover:shadow hover:shadow-orange-500 transition-all duration-500'>
                         <CardHeader>
                             <CardTitle className='text-orange-500 hover:shadow'>Focused On</CardTitle>
                             <CardDescription>Culture Connect bridges the gap between generations by promoting local traditions and inspiring involvement. Explore events, discover their significance, and create memories that last a lifetime.</CardDescription>
