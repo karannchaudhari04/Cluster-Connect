@@ -26,11 +26,9 @@ import emailjs from 'emailjs-com';
 import { useAuth } from '@/context/AuthContext';
 
 
-const navigate = useNavigate();
-
 export function Home() {
     const [status, setStatus] = useState<string>('');
-
+    const navigate = useNavigate();
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
