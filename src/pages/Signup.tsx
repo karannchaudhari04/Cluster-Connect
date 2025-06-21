@@ -8,7 +8,6 @@ import { useAuth } from "@/context/AuthContext";
 
 
 
-
 function Signup() {
   const { signup } = useAuth();
   const [email, setEmail] = useState('');
@@ -60,6 +59,7 @@ function Signup() {
       </div>
     </div>
   )
+  
 }
 
 export default Signup
