@@ -20,11 +20,11 @@ function Footer() {
             <h1 className="dark:text-gray-300 mt-4">
               Build by{" "}
               <span className="dark:text-[#039ee4]">
-                <a href="https://x.com/_Bashar_khan_">@_Bashar_khan_</a>
+                <a href="https://x.com/karannchaudhari">@Karan Chaudhari</a>
               </span>
             </h1>
             <div className="mt-2">
-              <a href="https://x.com/_Bashar_khan_">
+              <a href="https://x.com/karannchaudhari">
                 <Button variant='secondary'>
                   Share Your Thoughts On
                   <Icons.twitter className="icon-class ml-1 w-3.5" />
@@ -65,17 +65,17 @@ function Footer() {
               <h3 className="font-semibold mb-4">Socials</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="https://github.com/Basharkhan7776" className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
+                  <a href="https://github.com/karannchaudhari04" className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
                     Github
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/bashar-khan-ba2564291/" className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
+                  <a href="https://www.linkedin.com/in/karann-chaudhari/" className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
                     LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="https://x.com/_Bashar_khan_" className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
+                  <a href="https://x.com/karannchaudhari" className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
                     X
                   </a>
                 </li>
