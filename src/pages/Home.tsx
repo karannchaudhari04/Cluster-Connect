@@ -19,9 +19,6 @@ import { useEffect, useState } from 'react';
 import DisplayCards from "@/components/ui/display-cards";
 import { Bell, Locate, Sparkles } from "lucide-react";
 import { TestimonialCarousel } from "@/components/ui/testimonial";
-
-
-
 import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "@/envConfig";
 import emailjs from 'emailjs-com';
 import { useAuth } from '@/context/AuthContext';
