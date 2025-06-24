@@ -333,8 +333,8 @@ export default function Dashboard() {
             <p className=" font-semibold font-script text-3xl">Culture Connect</p>
           </Button>
         </div>
-        <div className="flex flex-row justify-center mt-20 py-4 ">
-          <div className="columns-1 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 ">
+<div className="w-full overflow-x-hidden px-4 mt-20 py-4">
+   <div className="mx-auto max-w-[950px] grid grid-cols-1 sm:grid-cols-2 gap-2">
             {
               filteredPosts.length > 0 ?
                 filteredPosts.map((post) => {
