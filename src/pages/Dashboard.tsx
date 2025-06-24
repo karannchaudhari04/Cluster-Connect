@@ -333,35 +333,43 @@ export default function Dashboard() {
             <p className=" font-semibold font-script text-3xl">Culture Connect</p>
           </Button>
         </div>
-<div className="w-full overflow-x-hidden px-4 mt-20 py-4">
-  <div className="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 place-items-center">
+
+
+<div className="w-full mt-20 py-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 max-w-screen-xl mx-auto">
     {(filteredPosts.length > 0 ? filteredPosts : posts).map((post) => {
       const isLiked = currentUser && post.likes?.includes(currentUser.uid);
       return (
         <div
-          key={post.id}
-           className="w-full max-w-[320px]"
-        >
-          <Post
-            postId={post.id || ''}
-            title={post.title}
-            description={post.description}
-            date={post.date}
-            stars={post.likes.length}
-            address={post.address}
-            tags={post.tags}
-            image={post.imageUrl}
-            userId={post.user.userId}
-            time={post.time}
-            handleLike={handleLikeToggle}
-            isLiked={isLiked || false}
-            handleDeletePost={handleDeletePost}
-          />
-        </div>
+  key={post.id}
+  className="w-full max-w-[450px] mx-auto overflow-hidden"
+>
+  <div className="h-full max-h-[850px] mx-auto">
+    <Post
+      postId={post.id || ''}
+      title={post.title}
+      description={post.description}
+      date={post.date}
+      stars={post.likes.length}
+      address={post.address}
+      tags={post.tags}
+      image={post.imageUrl}
+      userId={post.user.userId}
+      time={post.time}
+      handleLike={handleLikeToggle}
+      isLiked={isLiked || false}
+      handleDeletePost={handleDeletePost}
+    />
+  </div>
+</div>
       );
     })}
   </div>
 </div>
+
+
+
+
 
         {/* This is chatbot imple logic, scaled in future */}
         <div className={`fixed right-6 bottom-6 ${isVisible ? "translate-x-0" : "translate-x-28"} transition-transform duration-300`}>
