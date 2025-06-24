@@ -340,7 +340,7 @@ export default function Dashboard() {
       return (
         <div
           key={post.id}
-          className="w-full sm:w-[80%] md:w-[90%] lg:w-[90%] xl:w-[90%] max-w-[620px]"
+          className="w-full sm:w-[80%] md:w-[90%] lg:w-[90%] xl:w-[90%] max-w-[320px]"
         >
           <Post
             postId={post.id || ''}
