@@ -334,54 +334,35 @@ export default function Dashboard() {
           </Button>
         </div>
 <div className="w-full overflow-x-hidden px-4 mt-20 py-4">
-   <div className="mx-auto max-w-screen-lg grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {
-              filteredPosts.length > 0 ?
-                filteredPosts.map((post) => {
-                  const isLiked = currentUser && post.likes?.includes(currentUser.uid);
-                  return (
-                    <Post
-                      key={post.id}
-                      postId={post.id || ''}
-                      title={post.title}
-                      description={post.description}
-                      date={post.date}
-                      stars={post.likes.length}
-                      address={post.address}
-                      tags={post.tags}
-                      image={post.imageUrl}
-                      userId={post.user.userId}
-                      time={post.time}
-                      handleLike={handleLikeToggle}
-                      isLiked={isLiked || false}
-                      handleDeletePost={handleDeletePost}
-                    />
-                  );
-                }) :
-                posts.map((post) => {
-                  const isLiked = currentUser && post.likes?.includes(currentUser.uid);
-                  return (
-                    <Post
-                      key={post.id}
-                      postId={post.id || ''}
-                      title={post.title}
-                      description={post.description}
-                      date={post.date}
-                      stars={post.likes.length}
-                      address={post.address}
-                      tags={post.tags}
-                      image={post.imageUrl}
-                      userId={post.user.userId}
-                      time={post.time}
-                      handleLike={handleLikeToggle}
-                      isLiked={isLiked || false}
-                      handleDeletePost={handleDeletePost}
-                    />
-                  );
-                })
-            }
-          </div>
+  <div className="mx-auto max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 place-items-center">
+    {(filteredPosts.length > 0 ? filteredPosts : posts).map((post) => {
+      const isLiked = currentUser && post.likes?.includes(currentUser.uid);
+      return (
+        <div
+          key={post.id}
+          className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[90%] max-w-[320px]"
+        >
+          <Post
+            postId={post.id || ''}
+            title={post.title}
+            description={post.description}
+            date={post.date}
+            stars={post.likes.length}
+            address={post.address}
+            tags={post.tags}
+            image={post.imageUrl}
+            userId={post.user.userId}
+            time={post.time}
+            handleLike={handleLikeToggle}
+            isLiked={isLiked || false}
+            handleDeletePost={handleDeletePost}
+          />
         </div>
+      );
+    })}
+  </div>
+</div>
+
         {/* This is chatbot imple logic, scaled in future */}
         <div className={`fixed right-6 bottom-6 ${isVisible ? "translate-x-0" : "translate-x-28"} transition-transform duration-300`}>
           <Dialog>
