@@ -334,7 +334,7 @@ export default function Dashboard() {
           </Button>
         </div>
 <div className="w-full overflow-x-hidden px-4 mt-20 py-4">
-   <div className="mx-auto max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 gap-6">
+   <div className="mx-auto max-w-screen-lg grid grid-cols-1 sm:grid-cols-3 gap-6">
             {
               filteredPosts.length > 0 ?
                 filteredPosts.map((post) => {
@@ -412,7 +412,7 @@ const data = {
   navSecondary: [
     {
       title: "Feedback",
-      url: "/#blogs",
+      url: "/#contact",
       icon: Send,
     },
   ]
