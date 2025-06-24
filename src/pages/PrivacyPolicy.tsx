@@ -21,7 +21,7 @@ function PrivacyPolicy() {
                 <Label className="text-primary">Data Security :-</Label>
                 <p>We implement reasonable security measures to protect your data, though no system is completely secure.</p>
                 <Label className="text-primary">Your Rights :-</Label>
-                <p>You may request access to, or deletion of, your personal data by contacting us at <p className="text-blue-500">basharkhan7776@gmail.com</p></p>
+                <p>You may request access to, or deletion of, your personal data by contacting us at <p className="text-blue-500">karanchaudhari722@gmail.com</p></p>
                 <p>By using this app, you agree to this Privacy Policy.</p>
             </CardDescription>
         </Card>
