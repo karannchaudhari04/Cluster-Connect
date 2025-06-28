@@ -126,7 +126,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
                         <CardDescription>Give your feedback here</CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <form onSubmit={sendEmail}>
+                        <form onSubmit={sendEmail}  ref={formRef}>
                             <div className="grid w-full items-center gap-8">
                                 <div className="flex flex-col space-y-1.5 gap-2">
                                     <Label htmlFor="name">Name</Label>
