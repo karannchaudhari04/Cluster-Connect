@@ -73,7 +73,7 @@ export function Home() {
                 <div className='absolute flex m-2 justify-center 2xl:gap-20 items-center  lg:w-2/3 sm:w-[80vw] w-[95%] aspect-video rounded-3xl backdrop-blur-xl shadow-sm shadow-gray-600'>
                     <div className='flex w-full flex-col items-center gap-6 justify-center'>
                         <h1 className='sm:text-3xl text-2xl text-center font-semibold'>Culture Connect — Discover, Share & Celebrate Culture</h1>
-                        <h2 className='sm:text-3xl text-2xl text-center font-semibold'>Reconnect With Your Roots</h2>
+                        <h3 className='sm:text-3xl text-2xl text-center font-semibold'>Reconnect With Your Roots</h3>
                         <p className='text-center'>Celebrate the beauty of culture and tradition</p>
                     </div>
                     <div className='md:block hidden'>
