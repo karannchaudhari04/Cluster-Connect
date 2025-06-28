@@ -28,25 +28,27 @@ import { useAuth } from '@/context/AuthContext';
 
 
 export function Home() {
-    const [status, setStatus] = useState<string>('');
+    const [status, setStatus] = useState<string | null>(null);
 
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
 
-        emailjs
-            .sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, USER_ID)
-            .then(
-                (result) => {
-                    console.log('Email successfully sent!', result.text);
-                    setStatus('Feedback sent successfully!');
-                    e.currentTarget.reset(); // clear form fields
-                },
-                (error) => {
-                    console.error('Failed to send email. Error:', error.text);
-                    setStatus('Failed to send feedback.');
-                }
-            );
-    };
+   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, USER_ID)
+    .then(
+      (result) => {
+        console.log('Email successfully sent!', result.text);
+        setStatus('success'); // Track status for styling
+        e.currentTarget.reset(); // clear form fields
+      },
+      (error) => {
+        console.error('Failed to send email. Error:', error.text);
+        setStatus('error');
+      }
+    );
+};
+
     console.log(status);
 
 
@@ -139,9 +141,21 @@ export function Home() {
                                     <Textarea className='h-24' id="textarea" placeholder="Enter your Message" name='message' required />
                                 </div>
                             </div>
-                            <CardFooter className="flex justify-center">
-                        <Button type="submit" className='w-full p-4'>Send</Button>
-                    </CardFooter>
+                            <CardFooter className="flex flex-col justify-center items-center">
+  <Button type="submit" className='w-full p-4'>Send</Button>
+  
+  {status === 'success' && (
+    <p className="mt-4 text-green-600 text-center">
+      ✅ Feedback sent successfully!
+    </p>
+  )}
+  {status === 'error' && (
+    <p className="mt-4 text-red-600 text-center">
+      ❌ Failed to send feedback. Please try again.
+    </p>
+  )}
+</CardFooter>
+
                         </form>
                     </CardContent>
                 </Card>
