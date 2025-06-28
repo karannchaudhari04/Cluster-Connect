@@ -25,12 +25,13 @@ import { useAuth } from '@/context/AuthContext';
 
 import { useRef } from "react";
 
-const formRef = useRef<HTMLFormElement>(null);
 
 
 
 export function Home() {
 
+    
+const formRef = useRef<HTMLFormElement>(null);
 const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
