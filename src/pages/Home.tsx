@@ -51,14 +51,14 @@ export function Home() {
     };
     // Function to handle Get Started button click
     const handleGetStarted = () => {
-        if (userData) {
-            // If user is already logged in, redirect to dashboard
-            navigate('/dashboard');
-        } else {
-            // If user is not logged in, redirect to signup
-            navigate('/signup');
-        }
-    };
+    if (userData) {
+        // If user is already logged in, redirect to dashboard
+        navigate('/dashboard');
+    } else {
+        // If user is not logged in, redirect to signup
+        navigate('/signup');
+    }
+};
     console.log(status);
 
 
