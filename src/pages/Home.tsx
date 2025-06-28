@@ -23,7 +23,9 @@ import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "@/envConfig";
 import emailjs from 'emailjs-com';
 import { useAuth } from '@/context/AuthContext';
 
+import { useRef } from "react";
 
+const formRef = useRef<HTMLFormElement>(null);
 
 
 
@@ -38,7 +40,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
       (result) => {
         console.log('Email successfully sent!', result.text);
         alert("✅ Feedback submitted successfully!");
-        e.currentTarget.reset(); // Clear form
+        formRef.current?.reset();
       },
       (error) => {
         console.error('Failed to send email. Error:', error.text);
