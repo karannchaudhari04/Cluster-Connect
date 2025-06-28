@@ -154,7 +154,7 @@ export function Home() {
                         </form>
                     </CardContent>
                     <CardFooter className="flex justify-center">
-                        <Button className='w-full p-4'>Send</Button>
+                        <Button type="submit" className='w-full p-4'>Send</Button>
                     </CardFooter>
                 </Card>
             </div>
