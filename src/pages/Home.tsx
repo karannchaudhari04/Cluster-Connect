@@ -28,11 +28,6 @@ import { useAuth } from '@/context/AuthContext';
 
 
 export function Home() {
-    const [name, setName] = useState("");
-const [email, setEmail] = useState("");
-const [message, setMessage] = useState("");
-const [status, setStatus] = useState<string | null>(null);
-
 
 const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
@@ -41,24 +36,17 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     .sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, USER_ID)
     .then(
       (result) => {
-        console.log("Email successfully sent!", result.text);
+        console.log('Email successfully sent!', result.text);
         alert("✅ Feedback submitted successfully!");
-
-        // Clear all input fields
-        setName("");
-        setEmail("");
-        setMessage("");
-        setStatus("Email sent successfully!");
+        e.currentTarget.reset(); // Clear form
       },
       (error) => {
-        console.error("Failed to send email. Error:", error.text);
+        console.error('Failed to send email. Error:', error.text);
         alert("❌ Failed to submit feedback. Please try again.");
-        setStatus("Failed to send email. Please try again later.");
       }
     );
 };
 
-    console.log(status);
 
 
 
@@ -139,15 +127,15 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
                             <div className="grid w-full items-center gap-8">
                                 <div className="flex flex-col space-y-1.5 gap-2">
                                     <Label htmlFor="name">Name</Label>
-                                    <Input id="name" placeholder="Enter your Name" name='name' onChange={(e) => setName(e.target.value)} required />
+                                    <Input id="name" placeholder="Enter your Name" name='name' required />
                                 </div>
                                 <div className="flex flex-col space-y-1.5 gap-2">
                                     <Label htmlFor="email">Email</Label>
-                                    <Input id="email" type='email' placeholder="Enter your Email" name='email'   onChange={(e) => setEmail(e.target.value)} required />
+                                    <Input id="email" type='email' placeholder="Enter your Email" name='email' required />
                                 </div>
                                 <div className="flex flex-col space-y-1.5 gap-2">
                                     <Label htmlFor="textarea">Message</Label>
-                                    <Textarea className='h-24' id="textarea" placeholder="Enter your Message" name='message'   onChange={(e) => setEmail(e.target.value)} required />
+                                    <Textarea className='h-24' id="textarea" placeholder="Enter your Message" name='message' required />
                                 </div>
                             </div>
                             <CardFooter className="flex justify-center">
