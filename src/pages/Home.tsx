@@ -30,8 +30,7 @@ import { useAuth } from '@/context/AuthContext';
 export function Home() {
     const [status, setStatus] = useState<string | null>(null);
 
-
-   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
   emailjs
@@ -39,16 +38,17 @@ export function Home() {
     .then(
       (result) => {
         console.log('Email successfully sent!', result.text);
-        setStatus('success'); // Track status for styling
-        e.currentTarget.reset(); // clear form fields
+        alert("✅ Feedback submitted successfully!");
+        e.currentTarget.reset(); // Clear form
+        setStatus("Email sent successfully!");
       },
       (error) => {
         console.error('Failed to send email. Error:', error.text);
-        setStatus('error');
+        alert("❌ Failed to submit feedback. Please try again.");
+        setStatus("Failed to send email. Please try again later.");
       }
     );
 };
-
     console.log(status);
 
 
