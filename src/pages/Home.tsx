@@ -141,21 +141,9 @@ export function Home() {
                                     <Textarea className='h-24' id="textarea" placeholder="Enter your Message" name='message' required />
                                 </div>
                             </div>
-                            <CardFooter className="flex flex-col justify-center items-center">
-  <Button type="submit" className='w-full p-4'>Send</Button>
-  
-  {status === 'success' && (
-    <p className="mt-4 text-green-600 text-center">
-      ✅ Feedback sent successfully!
-    </p>
-  )}
-  {status === 'error' && (
-    <p className="mt-4 text-red-600 text-center">
-      ❌ Failed to send feedback. Please try again.
-    </p>
-  )}
-</CardFooter>
-
+                            <CardFooter className="flex justify-center">
+                        <Button type="submit" className='w-full p-4'>Send</Button>
+                    </CardFooter>
                         </form>
                     </CardContent>
                 </Card>
