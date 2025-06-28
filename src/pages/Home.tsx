@@ -137,10 +137,10 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
                                     <Label htmlFor="textarea">Message</Label>
                                     <Textarea className='h-24' id="textarea" placeholder="Enter your Message" name='message' required />
                                 </div>
-                            </div>
-                            <CardFooter className="flex justify-center">
+                                 <CardFooter className="flex justify-center space-y-1.5 gap-2">
                         <Button type="submit" className='w-full p-4'>Send</Button>
                     </CardFooter>
+                            </div>
                         </form>
                     </CardContent>
                 </Card>
