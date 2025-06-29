@@ -193,6 +193,7 @@ function HomeNav() {
             <a href="#home" className='hover:text-orange-600 hover:-translate-y-0.5 hover:scale-110 transition-all duration-200'>Home</a>
             <a href="#about" className='hover:text-orange-600 hover:-translate-y-0.5 hover:scale-110 transition-all duration-200'>About</a>
             <a href="#blogs" className='hover:text-orange-600 hover:-translate-y-0.5 hover:scale-110 transition-all duration-200'>Blogs</a>
+            <a href="#contact" className='hover:text-orange-600 hover:-translate-y-0.5 hover:scale-110 transition-all duration-200'>Contact</a>
         </div>
         <div className='flex items-center gap-4'>
             {(!userData) ? <>
@@ -324,21 +325,27 @@ function InfiniteSliderVertical() {
 const TESTIMONIAL_DATA = [
     {
         id: 1,
-        name: "Alisha Kausheen",
+        name: "Rahul",
         avatar: "https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png",
         description: "Quite an amazing and engaging project Looking forward to see folks using it to share their values and culture with the world"
     },
     {
         id: 2,
-        name: "Syed Zakaria Rizvi",
+        name: "Tejas",
         avatar: "https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png",
         description: "This groundbreaking innovation promises to revolutionize how we connect, learn, and grow, fostering a brighter future for all"
     },
     {
         id: 3,
-        name: "Apoorv Dixit",
+        name: "Omkar",
         avatar: "https://pbs.twimg.com/profile_images/1839577437358948352/V81kFLBO_400x400.jpg",
         description: "I'm thrilled to witness the unfolding of this transformative journey, where creativity meets collaboration to spark unprecedented progress."
+    },
+    {
+        id: 4,
+        name: "Dnyanesh",
+        avatar: "https://pbs.twimg.com/profile_images/1839577437358948352/V81kFLBO_400x400.jpg",
+        description: "This groundbreaking innovation promises to revolutionize how we connect, learn, and grow, fostering a brighter future for all"
     }
 ]
 
