@@ -338,13 +338,13 @@ const TESTIMONIAL_DATA = [
     {
         id: 3,
         name: "Omkar",
-        avatar: "https://pbs.twimg.com/profile_images/1839577437358948352/V81kFLBO_400x400.jpg",
+        avatar: "https://pbs.twimg.com/profile_images/1839577437358948352/V81kFLBO_400x400.png",
         description: "I'm thrilled to witness the unfolding of this transformative journey, where creativity meets collaboration to spark unprecedented progress."
     },
     {
         id: 4,
         name: "Dnyanesh",
-        avatar: "https://pbs.twimg.com/profile_images/1839577437358948352/V81kFLBO_400x400.jpg",
+        avatar: "https://pbs.twimg.com/profile_images/1839577437358948352/V81kFLBO_400x400.png",
         description: "This groundbreaking innovation promises to revolutionize how we connect, learn, and grow, fostering a brighter future for all"
     }
 ]
