@@ -544,7 +544,7 @@ function AppSidebar({ setSearchQuery, searchQuery, handleSearch, handleShowAllPo
             </DialogHeader>
             {(userData) ? <>
               <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
-                <Label>Cost Title</Label>
+                <Label>Culture Title</Label>
                 <Input
                   type="text"
                   placeholder="Enter your title here"
@@ -554,7 +554,7 @@ function AppSidebar({ setSearchQuery, searchQuery, handleSearch, handleShowAllPo
                   onChange={(e) => setTitle(e.target.value)}
                   required
                 />
-                <Label>Cost Description</Label>
+                <Label>Culter Description</Label>
                 <Textarea
                   placeholder="Enter your description here"
                   minLength={40}
@@ -608,7 +608,7 @@ function AppSidebar({ setSearchQuery, searchQuery, handleSearch, handleShowAllPo
                     required
                   ></Input>
                 </div>
-                <Label>Address</Label>
+                <Label>Culture Address</Label>
                 <div className=" flex flex-col gap-2">
                   <div className="flex gap-2">
                     <Input
