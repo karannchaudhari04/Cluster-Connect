@@ -554,7 +554,7 @@ function AppSidebar({ setSearchQuery, searchQuery, handleSearch, handleShowAllPo
                   onChange={(e) => setTitle(e.target.value)}
                   required
                 />
-                <Label>Culter Description</Label>
+                <Label>Culture Description</Label>
                 <Textarea
                   placeholder="Enter your description here"
                   minLength={40}
