@@ -11,7 +11,6 @@ import Tos from "./pages/Tos";
 import ForgotPassword from "./pages/ForgotPassword";
 
 
-
 export default function App() {
 
 
