@@ -20,7 +20,7 @@ function Footer() {
             <h1 className="dark:text-gray-300 mt-4">
               Build by{" "}
               <span className="dark:text-[#039ee4]">
-                <a href="https://x.com/karannchaudhari">@Karan Chaudhari</a>
+                <a href="https://buymeacoffee.com/karanchaudhari">@KaranChaudhari</a>
               </span>
             </h1>
             <div className="mt-2">
