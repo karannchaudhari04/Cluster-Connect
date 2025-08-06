@@ -13,7 +13,6 @@ import ForgotPassword from "./pages/ForgotPassword";
 
 export default function App() {
 
-
   return (
     <AuthProvider>
       <PostsProvider>
